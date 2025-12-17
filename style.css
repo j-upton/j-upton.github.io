@@ -141,6 +141,36 @@ body {
     max-width: 650px;
 }
 
+.main-nav {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(90, 107, 79, 0.15);
+    flex-wrap: wrap;
+}
+
+.nav-item {
+    font-size: 1.1rem;
+    color: #5a5248;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease;
+    font-weight: 400;
+    padding-bottom: 0.3rem;
+}
+
+.nav-item:hover {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+}
+
+.nav-item.active {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+    font-weight: 600;
+}
+
 h1 {
     font-family: 'Libre Baskerville', serif;
     font-size: 3rem;
@@ -215,6 +245,15 @@ a:hover {
     .social-icon {
         font-size: 1.5rem;
     }
+
+    .main-nav {
+        gap: 1.2rem;
+        margin-bottom: 2rem;
+    }
+
+    .nav-item {
+        font-size: 0.95rem;
+    }
 }
 
 @media (max-width: 600px) {
@@ -237,5 +276,14 @@ a:hover {
 
     body {
         font-size: 16px;
+    }
+
+    .main-nav {
+        gap: 0.8rem;
+        justify-content: space-between;
+    }
+
+    .nav-item {
+        font-size: 0.85rem;
     }
 }
